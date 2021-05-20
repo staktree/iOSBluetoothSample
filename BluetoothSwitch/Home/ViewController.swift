@@ -11,9 +11,12 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+
+        serial = BluetoothSerial.init()
     }
-
-
+    
+    @IBAction func scanButton(_ sender: Any) {
+        performSegue(withIdentifier: "ScanViewController", sender: nil)
+    }
 }
 

@@ -15,6 +15,9 @@
 		3B7753E82654FB4B00621056 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B7753E62654FB4B00621056 /* LaunchScreen.storyboard */; };
 		3B7753F32654FB4B00621056 /* BluetoothSwitchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7753F22654FB4B00621056 /* BluetoothSwitchTests.swift */; };
 		3B7753FE2654FB4B00621056 /* BluetoothSwitchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7753FD2654FB4B00621056 /* BluetoothSwitchUITests.swift */; };
+		3B77540C2654FB7700621056 /* ScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B77540B2654FB7700621056 /* ScanViewController.swift */; };
+		3B77540E2655005E00621056 /* BluetoothSerial.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B77540D2655005E00621056 /* BluetoothSerial.swift */; };
+		3B775413265540D600621056 /* ScanTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B775412265540D600621056 /* ScanTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,9 @@
 		3B7753F92654FB4B00621056 /* BluetoothSwitchUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BluetoothSwitchUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B7753FD2654FB4B00621056 /* BluetoothSwitchUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothSwitchUITests.swift; sourceTree = "<group>"; };
 		3B7753FF2654FB4B00621056 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3B77540B2654FB7700621056 /* ScanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanViewController.swift; sourceTree = "<group>"; };
+		3B77540D2655005E00621056 /* BluetoothSerial.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothSerial.swift; sourceTree = "<group>"; };
+		3B775412265540D600621056 /* ScanTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,10 +105,11 @@
 		3B7753DA2654FB4A00621056 /* BluetoothSwitch */ = {
 			isa = PBXGroup;
 			children = (
+				3B7754102655400200621056 /* BluetoothSerial */,
+				3B7754112655403000621056 /* Home */,
+				3B77540F26553FE600621056 /* Scan */,
 				3B7753DB2654FB4A00621056 /* AppDelegate.swift */,
 				3B7753DD2654FB4A00621056 /* SceneDelegate.swift */,
-				3B7753DF2654FB4A00621056 /* ViewController.swift */,
-				3B7753E12654FB4A00621056 /* Main.storyboard */,
 				3B7753E42654FB4B00621056 /* Assets.xcassets */,
 				3B7753E62654FB4B00621056 /* LaunchScreen.storyboard */,
 				3B7753E92654FB4B00621056 /* Info.plist */,
@@ -126,6 +133,32 @@
 				3B7753FF2654FB4B00621056 /* Info.plist */,
 			);
 			path = BluetoothSwitchUITests;
+			sourceTree = "<group>";
+		};
+		3B77540F26553FE600621056 /* Scan */ = {
+			isa = PBXGroup;
+			children = (
+				3B77540B2654FB7700621056 /* ScanViewController.swift */,
+				3B775412265540D600621056 /* ScanTableViewCell.swift */,
+			);
+			path = Scan;
+			sourceTree = "<group>";
+		};
+		3B7754102655400200621056 /* BluetoothSerial */ = {
+			isa = PBXGroup;
+			children = (
+				3B77540D2655005E00621056 /* BluetoothSerial.swift */,
+			);
+			path = BluetoothSerial;
+			sourceTree = "<group>";
+		};
+		3B7754112655403000621056 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				3B7753E12654FB4A00621056 /* Main.storyboard */,
+				3B7753DF2654FB4A00621056 /* ViewController.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,6 +294,9 @@
 				3B7753E02654FB4A00621056 /* ViewController.swift in Sources */,
 				3B7753DC2654FB4A00621056 /* AppDelegate.swift in Sources */,
 				3B7753DE2654FB4A00621056 /* SceneDelegate.swift in Sources */,
+				3B77540C2654FB7700621056 /* ScanViewController.swift in Sources */,
+				3B775413265540D600621056 /* ScanTableViewCell.swift in Sources */,
+				3B77540E2655005E00621056 /* BluetoothSerial.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
