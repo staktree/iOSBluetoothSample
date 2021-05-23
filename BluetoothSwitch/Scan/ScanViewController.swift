@@ -17,6 +17,7 @@ class ScanViewController: UIViewController, UITableViewDataSource, UITableViewDe
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        peripheralList = []
         serial.delegate = self
         serial.startScan()
     }
@@ -24,7 +25,6 @@ class ScanViewController: UIViewController, UITableViewDataSource, UITableViewDe
     //MARK: 테이블 뷰 데이터 소스
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // 몇 개의 셀을 보여주나요?
-        print(peripheralList.count)
         return peripheralList.count
     }
     
@@ -42,7 +42,14 @@ class ScanViewController: UIViewController, UITableViewDataSource, UITableViewDe
     //MARK: 테이블 뷰 델리게이트
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         // 셀을 클릭하면 어떻게 되나요?
-        print("click!")
+        
+        // 테이블 뷰의 셀을 선택했을 때 UI에 나타나는 효과
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        // 선택된 Pheripheral을 연결하기
+        serial.stopScan()
+        let selectedPeripheral = peripheralList[indexPath.row].peripheral
+        serial.connectToPeripheral(selectedPeripheral)
     }
     
     
