@@ -2,22 +2,23 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Serial View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BluetoothSwitch" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="SerialViewController" customModule="BluetoothSwitch" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TBg-Qc-PtZ">
-                                <rect key="frame" x="190.5" y="438" width="33" height="30"/>
+                                <rect key="frame" x="326" y="73" width="33" height="30"/>
                                 <state key="normal" title="scan"/>
                                 <connections>
                                     <action selector="scanButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RUR-r4-Hpe"/>
@@ -27,10 +28,11 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="TBg-Qc-PtZ" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="etf-Bk-7uW"/>
-                            <constraint firstItem="TBg-Qc-PtZ" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="xJu-Fx-XdZ"/>
+                            <constraint firstItem="TBg-Qc-PtZ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="29" id="4JK-6L-aDd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="TBg-Qc-PtZ" secondAttribute="trailing" constant="55" id="mqH-NP-5PR"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="7k0-sF-WJn"/>
                     <connections>
                         <segue destination="qdc-qy-CZQ" kind="presentation" identifier="ScanViewController" id="bHY-tc-NSn"/>
                     </connections>
