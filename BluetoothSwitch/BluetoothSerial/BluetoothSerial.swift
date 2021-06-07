@@ -192,7 +192,7 @@ class BluetoothSerial: NSObject, CBCentralManagerDelegate, CBPeripheralDelegate 
     func peripheral(_ peripheral: CBPeripheral, didReadRSSI RSSI: NSNumber, error: Error?) {
         // 블루투스 기기의 신호 강도를 요청하는 peripheral.readRSSI()가 호출하는 함수입니다.
         // 신호 강도와 관련된 코드를 작성합니다.
-        // 필요한 로직을 작성하면 됩니다. 
+        // 필요한 로직을 작성하면 됩니다.
     }
     
 }
