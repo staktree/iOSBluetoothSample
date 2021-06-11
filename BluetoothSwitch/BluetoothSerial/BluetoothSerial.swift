@@ -15,12 +15,14 @@ var serial : BluetoothSerial!
 protocol BluetoothSerialDelegate : AnyObject {
     func serialDidDiscoverPeripheral(peripheral : CBPeripheral, RSSI : NSNumber?)
     func serialDidConnectPeripheral(peripheral : CBPeripheral)
+    func serialDidReceiveMessage(message : String)
 }
 
 // 프로토콜에 포함되어 있는 일부 함수를 옵셔널로 설정합니다.
 extension BluetoothSerialDelegate {
     func serialDidDiscoverPeripheral(peripheral : CBPeripheral, RSSI : NSNumber?) {}
     func serialDidConnectPeripheral(peripheral : CBPeripheral) {}
+    func serialDidReceiveMessage(message : String) {}
 }
 
 
@@ -29,7 +31,6 @@ class BluetoothSerial: NSObject, CBCentralManagerDelegate, CBPeripheralDelegate 
      
     
     //MARK: 변수
-    
     
     // BluetoothSerialDelegate 프로토콜에 등록된 메서드를 수행하는 delegate입니다.
     var delegate : BluetoothSerialDelegate?
@@ -67,7 +68,6 @@ class BluetoothSerial: NSObject, CBCentralManagerDelegate, CBPeripheralDelegate 
     
     
     //MARK: 함수
-    
     
     /// serial을 초기화할 떄 호출하여야합니다. 시리얼은 nil이여서는 안되기 때문에 항상 초기화후 사용해야 합니다.
     override init() {
@@ -129,7 +129,7 @@ class BluetoothSerial: NSObject, CBCentralManagerDelegate, CBPeripheralDelegate 
         connectedPeripheral!.writeValue(data, for: writeCharacteristic!, type: writeType)
     }
     
-    //MARK: central, peripheral 함수
+    //MARK: Central, Peripheral Delegate 함수
     
     // CBCentralManagerDelegate에 포함되어 있는 메서드입니다. central 기기의 블루투스가 켜져있는지, 꺼져있는지 확인합니다. 확인하여 centralManager.state의 값을 .powerOn 또는 .powerOff로 변경합니다.
     func centralManagerDidUpdateState(_ central: CBCentralManager) {
@@ -182,10 +182,23 @@ class BluetoothSerial: NSObject, CBCentralManagerDelegate, CBPeripheralDelegate 
             }
         }
     }
+
+    // peripheral으로부터 데이터를 전송받으면 호출되는 메서드입니다.
+    func peripheral(_ peripheral: CBPeripheral, didUpdateValueFor characteristic: CBCharacteristic, error: Error?) {
+        // 전송받은 데이터가 존재하는지 확인합니다.
+        let data = characteristic.value
+        guard data != nil else { return }
+        
+        // 데이터를 String으로 변환하고, 변환된 값을 파라미터로 한 delegate함수를 호출합니다.
+        if let str = String(data: data!, encoding: String.Encoding.utf8) {
+            delegate?.serialDidReceiveMessage(message : str)
+        } else {
+            return
+        }
+    }
     
     func peripheral(_ peripheral: CBPeripheral, didWriteValueFor characteristic: CBCharacteristic, error: Error?) {
         // writeType이 .withResponse일 때, 블루투스 기기로부터의 응답이 왔을 때 호출되는 함수입니다.
-        // 블루투스 기기로부터 응답이 왔을 때 필요한 코드를 작성합니다.
         // 필요한 로직을 작성하면 됩니다.
     }
     

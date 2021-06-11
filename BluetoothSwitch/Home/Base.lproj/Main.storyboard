@@ -18,30 +18,51 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TBg-Qc-PtZ">
-                                <rect key="frame" x="326" y="73" width="33" height="30"/>
+                                <rect key="frame" x="356" y="73" width="33" height="30"/>
                                 <state key="normal" title="scan"/>
                                 <connections>
                                     <action selector="scanButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RUR-r4-Hpe"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vgp-KB-4Ky">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vgp-KB-4Ky">
                                 <rect key="frame" x="156" y="308" width="102" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Send Messege"/>
                                 <connections>
                                     <action selector="onButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lkD-mO-8nC"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="n2z-ld-NG9">
+                                <rect key="frame" x="57" y="456" width="300" height="50"/>
+                                <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                <color key="tintColor" systemColor="linkColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="Yoo-1a-h7e"/>
+                                    <constraint firstAttribute="height" constant="50" id="j2z-GU-jDl"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="message from Peripheral" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="duO-0R-qws">
+                                <rect key="frame" x="112" y="471" width="190" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="TBg-Qc-PtZ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="29" id="4JK-6L-aDd"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="TBg-Qc-PtZ" secondAttribute="trailing" constant="55" id="mqH-NP-5PR"/>
+                            <constraint firstItem="n2z-ld-NG9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="412" id="61w-WO-y5V"/>
+                            <constraint firstItem="Vgp-KB-4Ky" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="264" id="Gia-Mw-KRl"/>
+                            <constraint firstItem="Vgp-KB-4Ky" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="IWm-6v-mWS"/>
+                            <constraint firstItem="duO-0R-qws" firstAttribute="centerX" secondItem="n2z-ld-NG9" secondAttribute="centerX" id="h8Q-gP-wJq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="TBg-Qc-PtZ" secondAttribute="trailing" constant="25" id="mqH-NP-5PR"/>
+                            <constraint firstItem="n2z-ld-NG9" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="okY-rb-EHg"/>
+                            <constraint firstItem="duO-0R-qws" firstAttribute="centerY" secondItem="n2z-ld-NG9" secondAttribute="centerY" id="rzV-3O-B0M"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="7k0-sF-WJn"/>
                     <connections>
+                        <outlet property="serialMessageLabel" destination="duO-0R-qws" id="ghE-qG-xoD"/>
                         <segue destination="qdc-qy-CZQ" kind="presentation" identifier="ScanViewController" id="bHY-tc-NSn"/>
                     </connections>
                 </viewController>
@@ -107,8 +128,14 @@
         </scene>
     </scenes>
     <resources>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
