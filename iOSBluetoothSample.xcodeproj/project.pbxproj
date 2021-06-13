@@ -13,8 +13,8 @@
 		3B7753E32654FB4A00621056 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B7753E12654FB4A00621056 /* Main.storyboard */; };
 		3B7753E52654FB4B00621056 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B7753E42654FB4B00621056 /* Assets.xcassets */; };
 		3B7753E82654FB4B00621056 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B7753E62654FB4B00621056 /* LaunchScreen.storyboard */; };
-		3B7753F32654FB4B00621056 /* BluetoothSwitchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7753F22654FB4B00621056 /* BluetoothSwitchTests.swift */; };
-		3B7753FE2654FB4B00621056 /* BluetoothSwitchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7753FD2654FB4B00621056 /* BluetoothSwitchUITests.swift */; };
+		3B7753F32654FB4B00621056 /* iOSBluetoothSampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7753F22654FB4B00621056 /* iOSBluetoothSampleTests.swift */; };
+		3B7753FE2654FB4B00621056 /* iOSBluetoothSampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7753FD2654FB4B00621056 /* iOSBluetoothSampleUITests.swift */; };
 		3B77540C2654FB7700621056 /* ScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B77540B2654FB7700621056 /* ScanViewController.swift */; };
 		3B77540E2655005E00621056 /* BluetoothSerial.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B77540D2655005E00621056 /* BluetoothSerial.swift */; };
 		3B775413265540D600621056 /* ScanTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B775412265540D600621056 /* ScanTableViewCell.swift */; };
@@ -47,10 +47,10 @@
 		3B7753E72654FB4B00621056 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3B7753E92654FB4B00621056 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3B7753EE2654FB4B00621056 /* BluetoothSwitchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BluetoothSwitchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		3B7753F22654FB4B00621056 /* BluetoothSwitchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothSwitchTests.swift; sourceTree = "<group>"; };
+		3B7753F22654FB4B00621056 /* iOSBluetoothSampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSBluetoothSampleTests.swift; sourceTree = "<group>"; };
 		3B7753F42654FB4B00621056 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3B7753F92654FB4B00621056 /* BluetoothSwitchUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BluetoothSwitchUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		3B7753FD2654FB4B00621056 /* BluetoothSwitchUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothSwitchUITests.swift; sourceTree = "<group>"; };
+		3B7753FD2654FB4B00621056 /* iOSBluetoothSampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSBluetoothSampleUITests.swift; sourceTree = "<group>"; };
 		3B7753FF2654FB4B00621056 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3B77540B2654FB7700621056 /* ScanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanViewController.swift; sourceTree = "<group>"; };
 		3B77540D2655005E00621056 /* BluetoothSerial.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothSerial.swift; sourceTree = "<group>"; };
@@ -85,9 +85,9 @@
 		3B7753CF2654FB4A00621056 = {
 			isa = PBXGroup;
 			children = (
-				3B7753DA2654FB4A00621056 /* BluetoothSwitch */,
-				3B7753F12654FB4B00621056 /* BluetoothSwitchTests */,
-				3B7753FC2654FB4B00621056 /* BluetoothSwitchUITests */,
+				3B7753DA2654FB4A00621056 /* iOSBluetoothSample */,
+				3B7753F12654FB4B00621056 /* iOSBluetoothSampleTests */,
+				3B7753FC2654FB4B00621056 /* iOSBluetoothSampleUITests */,
 				3B7753D92654FB4A00621056 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -102,7 +102,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		3B7753DA2654FB4A00621056 /* BluetoothSwitch */ = {
+		3B7753DA2654FB4A00621056 /* iOSBluetoothSample */ = {
 			isa = PBXGroup;
 			children = (
 				3B7754102655400200621056 /* BluetoothSerial */,
@@ -114,25 +114,25 @@
 				3B7753E62654FB4B00621056 /* LaunchScreen.storyboard */,
 				3B7753E92654FB4B00621056 /* Info.plist */,
 			);
-			path = BluetoothSwitch;
+			path = iOSBluetoothSample;
 			sourceTree = "<group>";
 		};
-		3B7753F12654FB4B00621056 /* BluetoothSwitchTests */ = {
+		3B7753F12654FB4B00621056 /* iOSBluetoothSampleTests */ = {
 			isa = PBXGroup;
 			children = (
-				3B7753F22654FB4B00621056 /* BluetoothSwitchTests.swift */,
+				3B7753F22654FB4B00621056 /* iOSBluetoothSampleTests.swift */,
 				3B7753F42654FB4B00621056 /* Info.plist */,
 			);
-			path = BluetoothSwitchTests;
+			path = iOSBluetoothSampleTests;
 			sourceTree = "<group>";
 		};
-		3B7753FC2654FB4B00621056 /* BluetoothSwitchUITests */ = {
+		3B7753FC2654FB4B00621056 /* iOSBluetoothSampleUITests */ = {
 			isa = PBXGroup;
 			children = (
-				3B7753FD2654FB4B00621056 /* BluetoothSwitchUITests.swift */,
+				3B7753FD2654FB4B00621056 /* iOSBluetoothSampleUITests.swift */,
 				3B7753FF2654FB4B00621056 /* Info.plist */,
 			);
-			path = BluetoothSwitchUITests;
+			path = iOSBluetoothSampleUITests;
 			sourceTree = "<group>";
 		};
 		3B77540F26553FE600621056 /* Scan */ = {
@@ -239,7 +239,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 3B7753D32654FB4A00621056 /* Build configuration list for PBXProject "BluetoothSwitch" */;
+			buildConfigurationList = 3B7753D32654FB4A00621056 /* Build configuration list for PBXProject "iOSBluetoothSample" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -304,7 +304,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3B7753F32654FB4B00621056 /* BluetoothSwitchTests.swift in Sources */,
+				3B7753F32654FB4B00621056 /* iOSBluetoothSampleTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -312,7 +312,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3B7753FE2654FB4B00621056 /* BluetoothSwitchUITests.swift in Sources */,
+				3B7753FE2654FB4B00621056 /* iOSBluetoothSampleUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -592,7 +592,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		3B7753D32654FB4A00621056 /* Build configuration list for PBXProject "BluetoothSwitch" */ = {
+		3B7753D32654FB4A00621056 /* Build configuration list for PBXProject "iOSBluetoothSample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3B7754002654FB4B00621056 /* Debug */,

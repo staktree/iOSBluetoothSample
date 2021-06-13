@@ -69,7 +69,7 @@ class BluetoothSerial: NSObject, CBCentralManagerDelegate, CBPeripheralDelegate 
     
     //MARK: 함수
     
-    /// serial을 초기화할 떄 호출하여야합니다. 시리얼은 nil이여서는 안되기 때문에 항상 초기화후 사용해야 합니다.
+    /// serial을 초기화할 떄 호출하여야합니다. 시리얼은 nil될 수 없기 때문에 항상 초기화후 사용해야 합니다.
     override init() {
         super.init()
         self.centralManager = CBCentralManager(delegate: self, queue: nil)
@@ -131,9 +131,8 @@ class BluetoothSerial: NSObject, CBCentralManagerDelegate, CBPeripheralDelegate 
     
     //MARK: Central, Peripheral Delegate 함수
     
-    // CBCentralManagerDelegate에 포함되어 있는 메서드입니다. central 기기의 블루투스가 켜져있는지, 꺼져있는지 확인합니다. 확인하여 centralManager.state의 값을 .powerOn 또는 .powerOff로 변경합니다.
+    // CBCentralManagerDelegate에 포함되어 있는 메서드입니다. central 기기의 블루투스 상태가 변경될 때마다 호출됩니다. centralManager.state의 값은 켜져있을 때 .poweredOn, 꺼져있을 때 .poweredOff로 변경됩니다.
     func centralManagerDidUpdateState(_ central: CBCentralManager) {
-        
         pendingPeripheral = nil
         connectedPeripheral = nil
     }
@@ -146,7 +145,7 @@ class BluetoothSerial: NSObject, CBCentralManagerDelegate, CBPeripheralDelegate 
     }
     
     
-    // 기기 연결을 요청하면 호출되는 메서드입니다.
+    // 기기가 연결되면 호출되는 메서드입니다.
     func centralManager(_ central: CBCentralManager, didConnect peripheral: CBPeripheral) {
         peripheral.delegate = self
         pendingPeripheral = nil
@@ -198,12 +197,12 @@ class BluetoothSerial: NSObject, CBCentralManagerDelegate, CBPeripheralDelegate 
     }
     
     func peripheral(_ peripheral: CBPeripheral, didWriteValueFor characteristic: CBCharacteristic, error: Error?) {
-        // writeType이 .withResponse일 때, 블루투스 기기로부터의 응답이 왔을 때 호출되는 함수입니다.
+        // writeType이 .withResponse일 때, 블루투스 기기로부터의 응답이 왔을 때 호출되는 메서드입니다.
         // 필요한 로직을 작성하면 됩니다.
     }
     
     func peripheral(_ peripheral: CBPeripheral, didReadRSSI RSSI: NSNumber, error: Error?) {
-        // 블루투스 기기의 신호 강도를 요청하는 peripheral.readRSSI()가 호출하는 함수입니다.
+        // 블루투스 기기의 신호 강도를 요청하는 peripheral.readRSSI()가 호출하는 메서드입니다.
         // 신호 강도와 관련된 코드를 작성합니다.
         // 필요한 로직을 작성하면 됩니다.
     }
