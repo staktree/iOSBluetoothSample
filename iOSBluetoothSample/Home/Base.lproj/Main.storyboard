@@ -51,6 +51,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="TBg-Qc-PtZ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="29" id="4JK-6L-aDd"/>
+                            <constraint firstItem="TBg-Qc-PtZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="356" id="5tk-Pq-1ic"/>
                             <constraint firstItem="n2z-ld-NG9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="412" id="61w-WO-y5V"/>
                             <constraint firstItem="Vgp-KB-4Ky" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="264" id="Gia-Mw-KRl"/>
                             <constraint firstItem="Vgp-KB-4Ky" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="IWm-6v-mWS"/>
@@ -89,14 +90,20 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Peripheral Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Q3-dN-kcD">
-                                                    <rect key="frame" x="30" y="14" width="191" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Peripheral Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Q3-dN-kcD">
+                                                    <rect key="frame" x="30" y="15" width="325" height="20.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="7Q3-dN-kcD" secondAttribute="height" multiplier="349:22" id="WBG-s4-SnW"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="7Q3-dN-kcD" firstAttribute="leading" secondItem="Dvr-Bk-gSH" secondAttribute="leading" constant="30" id="DJT-iF-ooh"/>
+                                                <constraint firstItem="7Q3-dN-kcD" firstAttribute="centerY" secondItem="Dvr-Bk-gSH" secondAttribute="centerY" id="NiW-7s-wRw"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="peripheralName" destination="7Q3-dN-kcD" id="IJP-Vg-doh"/>
