@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TBg-Qc-PtZ">
-                                <rect key="frame" x="356" y="73" width="33" height="30"/>
+                                <rect key="frame" x="300" y="73" width="89" height="30"/>
                                 <state key="normal" title="scan"/>
                                 <connections>
                                     <action selector="scanButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RUR-r4-Hpe"/>
@@ -51,7 +51,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="TBg-Qc-PtZ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="29" id="4JK-6L-aDd"/>
-                            <constraint firstItem="TBg-Qc-PtZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="356" id="5tk-Pq-1ic"/>
+                            <constraint firstItem="TBg-Qc-PtZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="300" id="5tk-Pq-1ic"/>
                             <constraint firstItem="n2z-ld-NG9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="412" id="61w-WO-y5V"/>
                             <constraint firstItem="Vgp-KB-4Ky" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="264" id="Gia-Mw-KRl"/>
                             <constraint firstItem="Vgp-KB-4Ky" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="IWm-6v-mWS"/>
@@ -69,7 +69,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-35" y="125"/>
+            <point key="canvasLocation" x="-36.231884057971016" y="124.55357142857142"/>
         </scene>
         <!--Scan View Controller-->
         <scene sceneID="Gka-yW-rWe">
